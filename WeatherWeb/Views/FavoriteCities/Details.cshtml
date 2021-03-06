@@ -1,0 +1,57 @@
+﻿@model WeatherWeb.Models.FavoriteCities
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>FavoriteCities</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CityName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CityName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MinTemp)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MinTemp) °C
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MaxTemp) 
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MaxTemp) °C
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Precipitation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Precipitation) %
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Humidity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Humidity) %
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WindSpeed)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WindSpeed) Km/h
+        </dd>
+    </dl>
+</div>
+

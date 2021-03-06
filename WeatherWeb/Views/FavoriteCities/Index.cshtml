@@ -1,0 +1,72 @@
+﻿@model IEnumerable<WeatherWeb.Models.FavoriteCities>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<h5>Welcome @ViewBag.User</h5>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CityName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinTemp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxTemp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precipitation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Humidity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WindSpeed)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CityName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinTemp) °C
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxTemp) °C
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precipitation) %
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Humidity) %
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WindSpeed) Km/h
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
